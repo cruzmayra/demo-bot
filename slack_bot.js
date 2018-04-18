@@ -26,7 +26,7 @@ controller.setupWebserver(process.env.PORT, function(err, webserver) {
   })
 })
 
-var owner_name = null
+var owner_name = null 
 controller.hears(['hola'],['direct_message','direct_mention','mention'],function(bot,message) {
     bot.reply(message,"¿Qué tranza?");
 });
@@ -36,6 +36,10 @@ controller.hears(['^me[\\s]+llamo[\\s]+(.+)$'],['direct_message','direct_mention
     owner_name = message.match[1]
     bot.reply(message, "Chido " + owner_name + ", yo soy RefranBot")
   }
+});
+
+controller.hears(['^¿cómo estás?'],['direct_message','direct_mention','mention'],function(bot,message) {
+  bot.reply(message,"Como cochino recien comprado: desconociendo el mecate.");
 });
 
 controller.hears(['attach'],['direct_message','direct_mention'],function(bot,message) {
