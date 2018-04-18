@@ -38,8 +38,12 @@ controller.hears(['^me[\\s]+llamo[\\s]+(.+)$'],['direct_message','direct_mention
   }
 });
 
-controller.hears(['^¿cómo estás?'],['direct_message','direct_mention','mention'],function(bot,message) {
+controller.hears(['/(¿)?c(ó|o)mo est(á|a)s(\?)?$/giu'],['direct_message','direct_mention','mention'],function(bot,message) {
   bot.reply(message,"Como cochino recien comprado: desconociendo el mecate.");
+});
+
+controller.hears(['¿qué es eso?'],['direct_message','direct_mention','mention'],function(bot,message) {
+  bot.reply(message,"Soy un bot que contesta con frases y refranes mexicanos.");
 });
 
 controller.hears(['attach'],['direct_message','direct_mention'],function(bot,message) {
