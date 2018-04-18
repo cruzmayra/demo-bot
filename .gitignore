@@ -1,0 +1,6 @@
+telegram-node-bot
+node_modules
+npm-debug.log
+db
+botkit
+.env

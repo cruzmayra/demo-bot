@@ -1,0 +1,30 @@
+{
+  "name": "demo_bot",
+  "version": "0.0.1",
+  "description": "Robot de ejemplo.",
+  "main": "demo_bot.js",
+  "scripts": {
+    "slack": "node slack_bot.js",
+    "fb": "page_token='' verify_token='' port=3000 node facebook_bot.js",
+    "tg": "token='' node telegram_bot.js"
+  },
+  "author": "abel.romero@devopensource.com",
+  "dependencies": {
+    "back": "^1.0.2",
+    "body-parser": "^1.18.2",
+    "botkit": "^0.6.13",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "https-proxy-agent": "^2.2.1",
+    "jfs": "^0.3.0",
+    "ltx": "^2.7.1",
+    "md5": "^2.2.1",
+    "mustache": "^2.3.0",
+    "promise": "^8.0.1",
+    "redis": "^2.8.0",
+    "request": "^2.85.0",
+    "tiny_request": "^1.0.13",
+    "ware": "^1.3.0",
+    "ws": "^5.1.1"
+  }
+}
