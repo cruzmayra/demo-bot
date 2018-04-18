@@ -38,7 +38,7 @@ controller.hears(['^me[\\s]+llamo[\\s]+(.+)$'],['direct_message','direct_mention
   }
 });
 
-controller.hears(['/(¿)?c[ó|o]mo+est[á|a]s(\?)?$/g'],['direct_message','direct_mention','mention'],function(bot,message) {
+controller.hears(['/(¿)?c[ó|o]mo+est[á|a]s(\?)?$/giu'],['direct_message','direct_mention','mention'],function(bot,message) {
   bot.reply(message,"Como cochino recien comprado: desconociendo el mecate.");
 });
 
