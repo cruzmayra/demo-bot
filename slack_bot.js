@@ -26,7 +26,7 @@ controller.setupWebserver(process.env.PORT, function(err, webserver) {
   })
 })
 
-var owner_name = null
+var owner_name = null 
 controller.hears(['hola'],['direct_message','direct_mention','mention'],function(bot,message) {
     bot.reply(message,"¿Qué tranza?");
 });
@@ -36,6 +36,14 @@ controller.hears(['^me[\\s]+llamo[\\s]+(.+)$'],['direct_message','direct_mention
     owner_name = message.match[1]
     bot.reply(message, "Chido " + owner_name + ", yo soy RefranBot")
   }
+});
+
+controller.hears(['/(¿)?c[ó|o]mo+est[á|a]s(\?)?$/giu'],['direct_message','direct_mention','mention'],function(bot,message) {
+  bot.reply(message,"Como cochino recien comprado: desconociendo el mecate.");
+});
+
+controller.hears(['¿qué es eso?'],['direct_message','direct_mention','mention'],function(bot,message) {
+  bot.reply(message,"Soy un bot que contesta con frases y refranes mexicanos.");
 });
 
 controller.hears(['attach'],['direct_message','direct_mention'],function(bot,message) {
